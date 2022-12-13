@@ -90,45 +90,45 @@ a:nth-of-type(10){
   animation-name: rotate;
   animation-timing-function: cubic-bezier(0.01, 0.84, 0.42, 1);
   animation-duration: 3s; 
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .squash{
   animation-name: squash;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .scalerotate{
   animation-name: scalerotate;
   animation-duration: 4s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .jumpletter{
   animation-name: jumpletter;
   animation-timing-function: cubic-bezier(.28,-0.65,.81,1.56);
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .sprint{
   animation-name: sprint;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .colorchange{
   animation-name: colorchange;
   animation-duration: 5s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 .movealongbody{
   animation-name: movealongbody;
   animation-duration: 10s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
@@ -140,27 +140,27 @@ a:nth-of-type(10){
 .stretching{
   animation-name: stretching;
   animation-duration: 3s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .drop{
   animation-name: drop;
   animation-duration: 1s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .stretchturn{
   animation-name: stretchturn;
   animation-duration: 2s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .jump {
   animation-name: jump;
   animation-timing-function: cubic-bezier(0,1,1,.0);
   animation-duration: 1.2s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 @keyframes jump{
