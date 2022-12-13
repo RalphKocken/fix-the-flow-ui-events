@@ -5,6 +5,9 @@
 
 Animations and stuff.
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/106448490/207324496-38ae5ddf-5009-4887-aee9-e257178c6237.gif)
+
+
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
