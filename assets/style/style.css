@@ -17,10 +17,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   background: var(--secondary);
+  width: 100vw;
 }
 section {
-  max-width: 90vw;
+  width: 100%;
+  height: 100%;
 }
+
 a {
   display: inline-block;
   margin: 0.2em;
@@ -32,29 +35,135 @@ a {
   font-weight: normal;
   text-decoration: none;
 }
-a:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-}
 
 /* UI Event Classes */
 
 /* Jump animation on the interaction link */
-a:nth-of-type(12) {
+
+a:nth-of-type(n) {
   position: relative;
   background: var(--highlight-secondary);
   color: var(--secondary);
   border-color: var(--secondary);
 }
 
+a:nth-of-type(n):hover{
+  opacity: 50%;
+}
+
+a:nth-of-type(3) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+  border-radius: 50%;
+}
+
+a:nth-of-type(3) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+  border-radius: 50%;
+}
+
+span{
+  display: inline-block;
+  position: relative;
+  color: white;
+  transition: transform 1s ease-out;
+}
+
+a:nth-of-type(6){
+  position: relative;
+  background: green;
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+a:nth-of-type(10){
+  position: relative;
+  display: inline-block;
+}
+
+.rotate{
+  animation-name: rotate;
+  animation-timing-function: cubic-bezier(0.01, 0.84, 0.42, 1);
+  animation-duration: 3s; 
+  animation-iteration-count: 1;
+}
+
+.squash{
+  animation-name: squash;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+.scalerotate{
+  animation-name: scalerotate;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.jumpletter{
+  animation-name: jumpletter;
+  animation-timing-function: cubic-bezier(.28,-0.65,.81,1.56);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.sprint{
+  animation-name: sprint;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+.colorchange{
+  animation-name: colorchange;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.movealongbody{
+  animation-name: movealongbody;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.wave{
+  animation-name: wave;
+  animation-duration: 5s;
+}
+
+.stretching{
+  animation-name: stretching;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+.drop{
+  animation-name: drop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.stretchturn{
+  animation-name: stretchturn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
 .jump {
   animation-name: jump;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-timing-function: cubic-bezier(0,1,1,.0);
   animation-duration: 1.2s;
   animation-iteration-count: 1;
 }
 
-@keyframes jump {
+@keyframes jump{
   0% {
     transform: scale(1, 1) translateY(0);
   }
@@ -79,3 +188,195 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0);
+  }
+
+  25%{
+    transform: rotate(90deg);
+  }
+
+  50%{
+    transform: rotate(-180deg);
+  }
+
+  75%{
+    transform: rotate(90deg);
+  }
+
+  100%{
+    transform: rotate(0);
+  }
+}
+
+@keyframes squash{
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  10% {
+    transform: translateY(1rem) scale(1.2, 0.8);
+  }
+
+  20%{
+    transform: translateY(-10rem);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes scalerotate{
+  0%{
+    transform: scale(1) rotate(0);
+  }
+
+  20%{
+    transform: scale(2) rotate(1440deg);
+  }
+}
+
+  @keyframes jumpletter{
+  0%{
+    transform: translateY(0);
+  }
+
+  30%{
+    transform: translateY(-5rem);
+  }
+} 
+
+@keyframes sprint{
+
+  0%{
+    transform: translateX(0);
+  }
+  10%{
+    transform: translateX(-8rem) scale(0.5, 1) rotate(-5deg);
+  }
+
+  20%{
+    transform: translateX(-8rem) scale(0.5, 1) rotate(-5deg);
+  } 
+
+  40%{
+    transform: translateX(100rem) translateY(-10rem);
+  }
+}
+
+ @keyframes colorchange{
+
+  20%{
+    background-color: blue;
+  }
+
+  40%{
+    background-color: red;
+  }
+
+  60%{
+    background-color: yellow;
+  }
+
+  80%{
+    background-color: paleturquoise;
+  }
+
+  100%{
+    background-color: teal;
+  }
+ }
+
+ @keyframes movealongbody{
+  
+  0%{
+    transform: translateY(0) translateX(0);
+  }
+
+  25%{
+    transform: translateX(130%);
+  }
+
+  50%{
+    transform: translateY(120%) translateX(90%);
+  }
+
+  75%{
+    transform: translateY(120%) translateX(0px);
+  }
+
+  83%{
+    transform: translateY(120%) translateX(20%)
+  }
+
+  90%{
+    transform: translateX(-130px) translateY(120%)
+  }
+
+ }
+
+ @keyframes wave{
+  0%{
+    transform: translateY(0) translateX(0);
+  }
+
+  10%{
+    transform: translateY(250px);
+  }
+
+  20%{
+    transform: translateX(-150px) translateY(300px) rotate(180deg)
+  }
+
+  30%{
+    transform: translateX(-300px) translateY(250px) rotate(360deg)
+  }
+
+  40%{
+    transform: translateX(-450px) translateY(300px) rotate(540deg)
+  }
+
+  50%{
+    transform: translateX(-600px) translateY(250px) rotate(720deg)
+  }
+
+  60%{
+    transform: translateX(-750px) translateY(300px) rotate(900deg)
+ }
+  70%{
+    transform: translateX(-900px) translateY(250px) rotate(1080deg)
+  }
+
+ }
+
+@keyframes stretching{
+  50%{
+    transform: scale(1.5, 0.5)
+  }
+
+  100%{
+    transform: scale(0.5, 1.5);
+  }
+}
+
+
+@keyframes drop{
+ 30% {
+  padding-bottom: 3px;
+ }
+}
+
+@keyframes stretchturn{
+  20%{
+    transform: scale(1.5, 0.5)
+  }
+
+  100%{
+    transform: scale(1, 1) rotate(360deg);
+  }
+}
