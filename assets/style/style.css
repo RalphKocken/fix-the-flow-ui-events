@@ -510,16 +510,16 @@ a:nth-of-type(10){
 @keyframes playeranimation{
 
   0%{
-    background-image: url("/assets/style/runningman.gif");
+    background-image: url("../style/runningman.gif");
   }
 
   45%{
-    background-image: url("/assets/style/runningman.gif");
+    background-image: url("../style/runningman.gif");
   }
 
   46%{
     left: 180px;
-    background-image: url("/assets/style/runningman.png");
+    background-image: url("../style/runningman.png");
   }
 
   55%{
@@ -536,11 +536,11 @@ a:nth-of-type(10){
   58%{
     top: 460px;
     transform: rotate(-1turn) scaleX(-1);
-    background-image: url("/assets/style/runningman.png");
+    background-image: url("../style/runningman.png");
   }
 
   59%{
-    background-image: url("/assets/style/runningman.gif");
+    background-image: url("../style/runningman.gif");
   }
 
   100%{
