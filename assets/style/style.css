@@ -200,6 +200,7 @@ a:nth-of-type(10){
   width: 200px;
   height: 200px;
   background-size: cover;
+  background-image: url(/assets/runningman.gif);
 }
 
 .playeranimation{
@@ -509,12 +510,9 @@ a:nth-of-type(10){
 
 @keyframes playeranimation{
 
-  0%{
-    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");  
-  }
 
   45%{
-    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");
+    background-image: url("/assets/runningman.gif");
   }
 
   46%{
@@ -540,7 +538,7 @@ a:nth-of-type(10){
   }
 
   59%{
-    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");
+    background-image: url("/assets/runningman.gif");
   }
 
   100%{
