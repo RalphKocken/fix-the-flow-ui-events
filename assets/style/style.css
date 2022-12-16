@@ -90,45 +90,45 @@ a:nth-of-type(10){
   animation-name: rotate;
   animation-timing-function: cubic-bezier(0.01, 0.84, 0.42, 1);
   animation-duration: 3s; 
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .squash{
   animation-name: squash;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .scalerotate{
   animation-name: scalerotate;
   animation-duration: 4s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .jumpletter{
   animation-name: jumpletter;
   animation-timing-function: cubic-bezier(.28,-0.65,.81,1.56);
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .sprint{
   animation-name: sprint;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .colorchange{
   animation-name: colorchange;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 
 .movealongbody{
   animation-name: movealongbody;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 
@@ -140,27 +140,73 @@ a:nth-of-type(10){
 .stretching{
   animation-name: stretching;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-direction: alternate;
 }
 
 .drop{
   animation-name: drop;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .stretchturn{
   animation-name: stretchturn;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .jump {
   animation-name: jump;
   animation-timing-function: cubic-bezier(0,1,1,.0);
   animation-duration: 1.2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+}
+
+.dropballbutton{
+  position: absolute;
+  top: 45%; 
+  left: 30%;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.goal{
+  position: absolute;
+  top: 60%;
+  right: 2%;
+}
+
+.ball{
+  position: absolute;
+  top: -100px;
+  right: 200px;
+}
+
+.ballanimation{
+  animation-name: ballanimation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.player{
+  position: absolute;
+  top: 460px;
+  left: -200px;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.playeranimation{
+  animation-name: playeranimation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 @keyframes jump{
@@ -232,14 +278,17 @@ a:nth-of-type(10){
 
 
 @keyframes scalerotate{
-  0%{
-    transform: scale(1) rotate(0);
+
+  40%{
+    transform: translateX(-10rem) rotate(-920deg) scale(1, 0.8)
   }
 
-  20%{
-    transform: scale(2) rotate(1440deg);
+  60%{
+    transform: translateX(100rem) rotate(6440deg);
   }
+
 }
+
 
   @keyframes jumpletter{
   0%{
@@ -378,5 +427,124 @@ a:nth-of-type(10){
 
   100%{
     transform: scale(1, 1) rotate(360deg);
+  }
+}
+
+  @keyframes ballanimation{
+    4%, 12%, 20%, 28%, 36%{
+      top: 600px;
+      animation-timing-function: ease-out;
+    }
+
+    8%{
+      top: 300px;
+      animation-timing-function: ease-in;
+    }
+
+    16%{
+      top: 400px;
+      animation-timing-function: ease-in;
+    }
+
+    24%{
+      top: 500px;
+      animation-timing-function: ease-in;
+    }
+
+    32%{
+      top:600px;
+      animation-timing-function: ease-in;
+    }
+
+    46%{
+      top: 600px;
+      right: 1100px;
+      animation-timing-function: ease-out;
+      transform: rotate(-3000deg);
+    }
+
+    52%{
+      top: 480px;
+      right: 100px;
+      animation-timing-function: ease-in;
+      z-index: -1;
+    }
+
+    56%{
+      top: 600px;
+      right: 100px;
+      transform: rotate(-3000deg);
+      z-index: -1;
+    }
+
+    60%{
+      top: 560px;
+      animation-timing-function: ease-in;
+      z-index: -1;
+    }
+
+    64%{
+      top:600px;
+      animation-timing-function: ease-out;
+      z-index: -1;  
+    }
+
+    68%{
+      top: 580px;
+      animation-timing-function: ease-in;
+      z-index: 1;
+    }
+
+    72%{
+      top:600px;
+      animation-timing-function: ease-out;
+    }
+
+    100%{
+      top:600px;
+      right:300px;
+      transform: rotate(-3900deg); 
+    }
+}
+
+@keyframes playeranimation{
+
+  0%{
+    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");  
+  }
+
+  45%{
+    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");
+  }
+
+  46%{
+    left: 180px;
+    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.png");
+  }
+
+  55%{
+    left: 180px;
+    top: 460px;
+    transform: rotate(0turn) scale(1 , 1);
+  }
+
+  57%{
+    left: 180px;
+    top: 300px;
+  }
+
+  58%{
+    top: 460px;
+    transform: rotate(-1turn) scaleX(-1);
+    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.png");
+  }
+
+  59%{
+    background-image: url("/assets/tumblr_npvrvfBXw31u6w1edo1_400.gif");
+  }
+
+  100%{
+    left:-280px;
+    transform: rotate(-1turn) scaleX(-1);
   }
 }

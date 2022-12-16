@@ -5,6 +5,7 @@ let frontend = document.querySelector('a:nth-of-type(1)')
 let design = document.querySelector('a:nth-of-type(2)')
 let en = document.querySelector('a:nth-of-type(3)')
 let development = document.querySelectorAll('span')
+let developmentGoalPost = document.querySelector('a:nth-of-type(4)')
 let span = document.querySelector('span')
 let sprint5 = document.querySelector('a:nth-of-type(5)')
 let fix = document.querySelector('a:nth-of-type(6)')
@@ -13,9 +14,12 @@ let flow = document.querySelector('a:nth-of-type(8)')
 let user = document.querySelector('a:nth-of-type(9)')
 let interface = document.querySelector('a:nth-of-type(10) .interface')
 let events = document.querySelector('a:nth-of-type(11)')
+let dropButton = document.querySelector('.dropballbutton')
+let ball = document.querySelector('.ball')
+let player = document.querySelector('.player')
 
 //event listeners
-interaction.addEventListener('click', jumpHandler)
+interaction.addEventListener('click', jumpHandler)  
 interaction.addEventListener('animationend', jumpHandler)
 frontend.addEventListener('click', rotateHandler)
 frontend.addEventListener('animationend', rotateHandler)
@@ -43,7 +47,8 @@ user.addEventListener('animationend', stretchingHandler)
 interface.addEventListener('click', dropHandler)
 interface.addEventListener('animationend', dropHandler)
 events.addEventListener('click', stretchturnHandler)
-
+dropButton.addEventListener('click', dropballHandler)
+dropButton.addEventListener('animationend', dropballHandler)
 
 //functions
 function jumpHandler(){
@@ -88,4 +93,9 @@ function dropHandler(){
 
 function stretchturnHandler(){
   events.classList.toggle('stretchturn')
+}
+
+function dropballHandler(){
+  ball.classList.toggle('ballanimation');
+  player.classList.toggle('playeranimation');
 }
