@@ -12,7 +12,7 @@ Animations and stuff.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-Een oefening om de animaties is CSS met javascript te toggelen. Focus op de beginselen van Javascript (eventListeners) en CSS animaties (keyframes).
+Een oefening om de animaties in CSS met javascript te toggelen. Focus op de beginselen van Javascript (eventListeners) en CSS animaties (keyframes).
 
 ## Experimenten
 <!-- In de Experimenten beschrijf je wat je per experimnet hebt gedaan en documenteer je de code aan de hand van voorbeelden -->
